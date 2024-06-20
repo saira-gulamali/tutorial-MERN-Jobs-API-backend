@@ -38,7 +38,7 @@ app.use(
 app.use(xss());
 // extra packages
 
-routes;
+// routes;
 app.get("/", (req, res) => {
   res.send("jobs api");
 });
