@@ -38,10 +38,10 @@ app.use(
 app.use(xss());
 // extra packages
 
-// routes
-// app.get("/", (req, res) => {
-//   res.send("jobs api");
-// });
+routes;
+app.get("/", (req, res) => {
+  res.send("jobs api");
+});
 
 app.use("/api/v1/auth", authRouter);
 // because job routes are authenticated, we will only get back data for a specific user
