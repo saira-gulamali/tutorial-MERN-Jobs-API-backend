@@ -36,20 +36,23 @@ This repo contains the backend only. For the frontend repo, refer to https://git
 ### backend
 
 - npm install
+
 - configure .env file with PORT, MONGO_URI & JWT_SECRET, JWT_LIFETIME & CORS
+
+* PORT is the port the backend API server will run on
+* MONGO_URI is the mongoDB database connection string (ensure to include the database name, username and password)
+* JWT_SECRET is a 256-bit encryption key
+* JWT_LIFETIME can be set to 30d
+* CORS is the url of the frontend server
+
 - npm start
-- connect with postman to localhost:5000
+- connect with postman to localhost:5000 or connect with frontend
 
 #### API Documentation
 
 - for api documentation run /documentation/redoc/redoc-static.html in browser
 
-#### Database Connection
-
-1. Setup .env in the root
-2. Add MONGO_URI with correct value
-
 #### Routers
 
-- auth.js
-- jobs.js
+- /routes/auth.js
+- /routes/jobs.js
