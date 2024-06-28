@@ -1,8 +1,44 @@
-#### Setup
+# 06 - Jobs API App Backend
 
-```bash
-npm install && npm start
-```
+Taken from John Smilga - Node Course - Section 9 - Jobs API
+
+## Description
+
+Full stack App (API and React frontend) providing data for Jobs, with authenticated/protected routes.
+
+This repo contains the backend only. For the frontend repo, refer to https://github.com/saira-gulamali/tutorial-MERN-Jobs-API-frontend
+
+## Tech stack
+
+### backend
+
+- node
+- express
+- mongoose
+- mongoDB
+- nodemon
+- express-async-errors
+- express-rate-limit
+- dotenv
+- cors
+- bcryptjs
+- helmet
+- http-status-codes
+- joi
+- jsonwebtoken
+- rate-limiter
+- swagger-ui-express
+- xss-clean
+- yamljs
+
+## Usage
+
+### backend
+
+- npm install
+- configure .env file with PORT, MONGO_URI & JWT_SECRET, JWT_LIFETIME & CORS
+- npm start
+- connect with postman to localhost:5000
 
 #### API Documentation
 
@@ -17,42 +53,3 @@ npm install && npm start
 
 - auth.js
 - jobs.js
-
-#### User Model
-
-Email Validation Regex
-
-```regex
-/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-```
-
-#### Register User
-
-- Validate - name, email, password - with Mongoose
-- Hash Password (with bcryptjs)
-- Save User
-- Generate Token
-- Send Response with Token
-
-#### Login User
-
-- Validate - email, password - in controller
-- If email or password is missing, throw BadRequestError
-- Find User
-- Compare Passwords
-- If no user or password does not match, throw UnauthenticatedError
-- If correct, generate Token
-- Send Response with Token
-
-#### Mongoose Errors
-
-- Validation Errors
-- Duplicate (Email)
-- Cast Error
-
-#### Security
-
-- helmet
-- cors
-- xss-clean
-- express-rate-limit
